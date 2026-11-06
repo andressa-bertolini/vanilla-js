@@ -1,15 +1,23 @@
 import './style.css'
-import javascriptLogo from './assets/javascript.svg'
-import viteLogo from './assets/vite.svg'
 import { setupCounter } from './counter.js'
 
 const a = 'test';
+let $b = 7;
+$b += 2;
+
+let $c = 4 % 2;
+
+let _d = 7 ** 2;
+
+let e = Math.pow(7,2);
 
 document.querySelector('#app').innerHTML = `
 <section id="center">
   <div class="hero">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
+        ${$b}
+        ${$c} //RESTO!
+        ${_d}
+        ${e}
   </div>
   <div>
     <h1>Get started</h1>
@@ -29,13 +37,11 @@ document.querySelector('#app').innerHTML = `
     <ul>
       <li>
         <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
           Explore Vite
         </a>
       </li>
       <li>
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img class="button-icon" src="${javascriptLogo}" alt="">
           Learn more
         </a>
       </li>
