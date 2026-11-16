@@ -1,30 +1,11 @@
 import './style.css'
 import { setupCounter } from './counter.js'
 
-const a = 'test';
-let $b = 7;
-$b += 2;
-
-let $c = 4 % 2;
-
-let _d = 7 ** 2;
-
-let e = Math.pow(7,2);
-
 document.querySelector('#app').innerHTML = `
 <section id="center">
-  <div class="hero">
-        ${$b}
-        ${$c} //RESTO!
-        ${_d}
-        ${e}
-  </div>
   <div>
-    <h1>Get started</h1>
-    <p>${typeof a}</p>
-    <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
+    <h1>Playground</h1>
   </div>
-  <button id="counter" type="button" class="counter"></button>
 </section>
 
 <div class="ticks"></div>
@@ -32,30 +13,33 @@ document.querySelector('#app').innerHTML = `
 <section id="next-steps">
   <div id="docs">
     <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
+    <h2>Falsy</h2>
     <ul>
       <li>
-        <a href="https://vite.dev/" target="_blank">
-          Explore Vite
-        </a>
+        Null
       </li>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          Learn more
-        </a>
+        Undefined
+      </li>
+      <li>
+        NaN
+      </li>
+      <li>
+        0
+      </li>
+      <li>
+        " "
       </li>
     </ul>
   </div>
   <div id="social">
     <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
+    <h2>Truthy</h2>
     <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
+      <li>"0"</li>
+      <li>"false"</li>
+      <li>{}</li>
+      <li>[]</li>
     </ul>
   </div>
 </section>
