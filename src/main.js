@@ -12,6 +12,17 @@ switch(status){
    message = "Order canceled.";
 }
 
+let price = 20;
+let quantity = 3;
+
+let total = price * quantity;
+
+total += 5;
+
+let isBig = total > 50 ? true : false;
+
+document.querySelector('#demo').innerHTML = `Total: ${total}, big order: ${isBig}`;
+
 document.querySelector('#app').innerHTML = `
 <section id="center">
   <div>
