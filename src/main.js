@@ -1,70 +1,41 @@
 import './style.css'
-import { setupCounter } from './counter.js'
+//This example uses the weekday number to calculate the weekday name:
 
-const status = "ok";
-let message;
+const today = new Date();
+let weekDayCode = today.getDay();
+let weekday;
 
-switch(status){
-  case "ok":
-    message = "Order received.";
+switch(weekDayCode){
+  case 0: 
+    weekday = 'Sunday';
     break;
-  default: 
-   message = "Order canceled.";
+  case 1: 
+    weekday = 'Monday';
+    break;
+  case 2: 
+    weekday = 'Tuesday';
+    break;
+  case 3: 
+    weekday = 'Wednesday';
+    break;
+  case 4: 
+    weekday = 'Thursday';
+    break;
+  case 5: 
+    weekday = 'Friday';
+    break;
+  case 6: 
+    weekday = 'Saturday';
+    break;
 }
-
-let price = 20;
-let quantity = 3;
-
-let total = price * quantity;
-
-total += 5;
-
-let isBig = total > 50 ? true : false;
-
-document.querySelector('#demo').innerHTML = `Total: ${total}, big order: ${isBig}`;
 
 document.querySelector('#app').innerHTML = `
 <section id="center">
   <div>
-    <h1>Order status: ${message}</h1>
+    <h1>Today is: ${weekday}</h1>
   </div>
 </section>
 
-<div class="ticks"></div>
-
-<section id="next-steps">
-  <div id="docs">
-    <h2>Falsy</h2>
-    <ul>
-      <li>
-        Null
-      </li>
-      <li>
-        Undefined
-      </li>
-      <li>
-        NaN
-      </li>
-      <li>
-        0
-      </li>
-      <li>
-        " "
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <h2>Truthy</h2>
-    <ul>
-      <li>"0"</li>
-      <li>"false"</li>
-      <li>{}</li>
-      <li>[]</li>
-    </ul>
-  </div>
-</section>
-
-<div class="ticks"></div>
 <section id="spacer"></section>
 `
 
